@@ -1,0 +1,1680 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    height: 50%;
+    padding: 10px 4vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#ojo_colgado {
+    position: absolute;
+    top: 835px;
+    left: 26vh;
+    width: 45px;
+    height: 90px;
+}
+
+.proyecto1,
+.proyecto2 {
+    width: 250px;
+    height: 650px;
+
+    font-family: 'Raleway', sans-serif;
+
+    position: relative;
+    left: 60%;
+
+    padding: 25px;
+
+    border-radius: 5px;
+
+    font-size: 20px;
+    text-align: center;
+
+    justify-content: space-between;
+}
+
+.proyecto2 {
+    background-color: #000;
+    color: #fff;
+}
+
+.proyecto1 {
+    background-color: #fff;
+    color: #000;
+    border: 3px solid #000;
+}
+
+.proyecto2 h3 {
+    border-bottom: 1px solid #fff;
+}
+
+.proyecto1 h3 {
+    border-bottom: 3px solid #000;
+}
+
+.sabermas {
+    position: absolute;
+
+    bottom: 25px;
+    left: 0;
+
+    width: 100%;
+
+    text-align: center;
+
+    background: none;
+    border: none;
+    outline: none;
+
+    color: inherit;
+    font-family: 'Raleway', sans-serif;
+
+    font-size: 20px;
+    font-weight: 400;
+
+    padding: 0;
+    margin: 0;
+
+    cursor: pointer;
+}
+
+.proyectos div {
+    display: block;
+    transition: 0.35s ease-in-out;
+}
+
+.proyecto2:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.proyecto2:hover h3 {
+    border-bottom: 3px solid #000;
+}
+
+.logo {
+    color: #000;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #000;
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    text-decoration: underline;}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+    min-height: 90vh;
+
+    padding: 30px 4vw;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+.hero-title {
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.hero-title h1 {
+    text-align: center;
+
+    font-size: clamp(80px, 16vw, 250px);
+
+    line-height: 0.75;
+
+    letter-spacing: -10px;
+
+    font-family: 'Raleway', sans-serif;
+
+    font-weight: 100;
+
+    z-index: 1;
+
+    /* Evita que el título provoque overflow */
+    max-width: 100%;
+}
+
+.hero-title p,
+#contacto_texto {
+    text-align: center;
+
+    margin-top: 30px;
+
+    font-size: 20px;
+
+    line-height: 1.3;
+}
+
+.scroll {
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    text-align: center;
+
+    padding: 10px;
+
+    z-index: 10;
+}
+
+#ojo:hover {
+    content: url("Logo.gif");
+}
+
+
+/* =========================
+   SECCIONES
+   ========================= */
+
+section {
+    padding: 80px 4vw;
+    margin-top: 50px;
+}
+
+.section-header {
+    display: flex;
+    gap: 30px;
+}
+
+.section-header span {
+    font-size: 12px;
+}
+
+.section-header h2 {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+
+/* =========================
+   ABOUT
+   ========================= */
+
+#sobre-mi {
+    padding: 0vw;
+
+    margin-bottom: 10vh;
+
+    position: relative;
+}
+
+#header_about {
+    display: grid;
+
+    grid-template-columns: 5% 10%;
+
+    position: absolute;
+
+    top: 63vh;
+    right: 10vh;
+
+    margin-top: 0;
+}
+
+#Logo_sentado {
+    justify-self: right;
+
+    width: 70px;
+    height: 50px;
+
+    position: absolute;
+
+    top: 55vh;
+    right: 10vh;
+}
+
+.about-content {
+    margin: 50px;
+
+    margin-left: 60px;
+    margin-right: 300px;
+
+    padding: 0;
+
+    display: grid;
+
+    grid-template-columns: 60% 40%;
+
+    border: 3px solid black;
+
+    border-radius: 30px;
+
+    color: white;
+
+    background-color: #000;
+}
+
+.about-content img {
+    width: 400px;
+    height: 400px;
+
+    justify-self: right;
+
+    border: 2px solid transparent;
+
+    margin-top: 20px;
+    margin-right: 40px;
+
+    border-radius: 10%;
+
+    filter: grayscale(100%) contrast(1.3) brightness(1.5);
+
+    transition: filter 0.8s ease;
+}
+
+.about-content img:hover {
+    filter: grayscale(0%) contrast(1) brightness(0.9);
+}
+
+.about-text {
+    padding: 10%;
+
+    padding-left: 8%;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    text-align: justify;
+
+    font-family: 'Raleway', sans-serif;
+}
+
+.about-text p + p {
+    margin-top: 30px;
+}
+
+
+/* =========================
+   EXPLORE
+   ========================= */
+
+#header_skills {
+    margin-left: 10vh;
+}
+
+.content {
+    width: 60vw;
+
+    margin-left: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+.explore-content {
+    font-family: 'Raleway', sans-serif;
+
+    background-color: #000;
+
+    color: #fff;
+
+    border-radius: 10px;
+
+    padding: 30px;
+
+    min-height: 315px;
+
+    display: grid;
+
+    grid-template-columns: 30% 70%;
+
+    gap: 20px;
+}
+
+.explore-content h2 {
+    margin: 0;
+
+    font-size: 28px;
+
+    line-height: 1;
+
+    font-weight: bold;
+
+    letter-spacing: -1px;
+}
+
+.tool-groups {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 35px;
+
+    row-gap: 25px;
+}
+
+.tool-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.tool-category {
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+.tool-group ul {
+    list-style: none;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 4px 14px;
+
+    padding: 0;
+    margin: 0;
+}
+
+.tool-group li {
+    font-size: 15px;
+
+    white-space: nowrap;
+}
+
+.language-education {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-left: 30px;
+}
+
+.info-block {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.info-label {
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+.info-item {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.info-item strong {
+    font-size: 16px;
+
+    font-weight: normal;
+}
+
+.info-item span {
+    font-size: 12px;
+
+    line-height: 1.3;
+}
+
+#interests {
+    grid-column: 1 / -1;
+
+    min-height: 160px;
+
+    display: grid;
+
+    grid-template-columns: 20% 80%;
+
+    align-items: center;
+}
+
+#interests ul {
+    list-style: none;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 0;
+    margin: 0;
+}
+
+#interests li {
+    font-size: 17px;
+
+    white-space: nowrap;
+
+    position: relative;
+}
+
+
+/* =========================
+   CONTACTO
+   ========================= */
+
+#contacto {
+    padding: 0;
+
+    margin: 0;
+
+    position: relative;
+
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+#contacto_texto {
+    position: absolute;
+
+    justify-self: center;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    bottom: 60vh;
+
+    width: 100%;
+}
+
+#in,
+#gh,
+#cv,
+#email {
+    width: 2%;
+
+    margin: 10px;
+}
+
+#logo_contacto {
+    margin: 0;
+
+    width: 3%;
+}
+
+
+/* =========================
+   IMAGEN FINAL
+   ========================= */
+
+#pie {
+    margin-top: 60vh;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100vw;
+
+    max-width: 100%;
+
+    height: auto;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+#pie:hover {
+    content: url(Bajo_a.gif);
+}
+
+
+/* =========================
+   VISOR 3D
+   ========================= */
+
+#modal3D {
+    display: none;
+
+    width: 100%;
+    height: 100%;
+
+    min-height: 560px;
+
+    background: #000;
+}
+
+.modal-image.show-3d #modal3D {
+    display: block;
+}
+
+.modal-image.show-3d #modalImage {
+    display: none;
+}
+
+#modal3D::part(default-ar-button) {
+    background: #fff;
+
+    color: #000;
+}
+
+
+/* =========================
+   OVERLAY
+   ========================= */
+
+.project-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(255, 255, 255, 0.78);
+
+    display: flex;
+    justify-content: center;
+
+    align-items: flex-start; /* en vez de center */
+
+    overflow-y: auto;        /* importante */
+    padding: 40px 0;         /* margen arriba y abajo */
+
+    z-index: 9999;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+
+    backdrop-filter: blur(8px);
+}
+
+.project-overlay.active {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* =========================
+   MODAL
+   ========================= */
+
+.project-modal {
+    width: min(1200px, 92vw);
+
+    
+
+    background: #000;
+
+    color: #fff;
+
+    border-radius: 30px;
+
+    position: relative;
+
+    padding: 45px;
+
+    display: grid;
+
+    grid-template-columns: 38% 62%;
+
+    gap: 45px;
+
+    font-family: 'Raleway', sans-serif;
+
+    transform: translateY(30px) scale(0.97);
+
+    transition:
+        transform 0.4s cubic-bezier(.2, .8, .2, 1);
+}
+
+.project-overlay.active .project-modal {
+    transform: translateY(0) scale(1);
+}
+
+
+/* =========================
+   IMAGEN MODAL
+   ========================= */
+
+.modal-image {
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 560px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    background: #222;
+
+    position: relative;
+}
+
+.modal-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    filter: grayscale(100%) contrast(1.1);
+
+    transition: opacity 0.25s ease;
+}
+
+.modal-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        transparent 70%,
+        rgba(0, 0, 0, 0.35)
+    );
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   CERRAR
+   ========================= */
+
+.close-modal {
+    position: absolute;
+
+    top: 20px;
+
+    right: 25px;
+
+    width: 45px;
+
+    height: 45px;
+
+    border: 1px solid #fff;
+
+    border-radius: 50%;
+
+    background: #000;
+
+    color: #fff;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 30px;
+
+    font-weight: 200;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: 0.25s ease;
+
+    z-index: 5;
+}
+
+#cerrar {
+    width: 30px;
+}
+
+.close-modal:hover #cerrar {
+    content: url("Ojo cerrado blanco.png");
+}
+
+
+/* =========================
+   CONTENIDO MODAL
+   ========================= */
+
+.modal-content {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 45px 20px 20px 0;
+}
+
+.modal-header {
+    border-bottom: 1px solid #fff;
+
+    padding-bottom: 30px;
+
+    margin-bottom: 35px;
+}
+
+.modal-header span {
+    display: block;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+.modal-header h2 {
+    font-size: clamp(45px, 6vw, 82px);
+
+    line-height: 0.9;
+
+    letter-spacing: -4px;
+
+    font-weight: 200;
+}
+
+.modal-body {
+    display: grid;
+
+    grid-template-columns: 60% 40%;
+
+    gap: 40px;
+}
+
+.modal-description {
+    max-width: 600px;
+}
+
+.modal-description p {
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    font-weight: 300;
+}
+
+.modal-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+.modal-info span {
+    display: block;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+.modal-info p {
+    font-size: 14px;
+
+    line-height: 1.4;
+
+    font-weight: 300;
+}
+
+
+/* =========================
+   GITHUB
+   ========================= */
+
+.modal-github {
+    margin-top: 40px;
+}
+
+.modal-github a {
+    display: inline-block;
+
+    color: #fff;
+
+    background: transparent;
+
+    text-decoration: none;
+
+    border: 1px solid #fff;
+
+    border-radius: 100px;
+
+    padding: 13px 22px;
+
+    font-family: 'Raleway', sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 400;
+
+    letter-spacing: 1.5px;
+
+    transition: all 0.25s ease;
+
+    cursor: pointer;
+}
+
+.modal-github a:hover {
+    background: #fff;
+
+    color: #000;
+}
+
+
+/* =========================
+   TRES OJOS
+   ========================= */
+
+.tresojos_div {
+    position: relative;
+}
+
+#tres_ojos {
+    width: 130px;
+
+    position: absolute;
+
+    top: 480px;
+
+    left: 90px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .proyecto1,
+    .proyecto2 {
+        left: 35%;
+    }
+
+    #ojo_colgado {
+        left: 12vw;
+    }
+
+    .about-content {
+        margin-left: 30px;
+        margin-right: 30px;
+
+        grid-template-columns: 55% 45%;
+    }
+
+    .about-content img {
+        width: 80%;
+        height: auto;
+
+        margin-right: 20px;
+    }
+
+    .content {
+        width: 90vw;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        grid-template-columns: 1fr;
+    }
+
+    .explore-content {
+        grid-template-columns: 30% 70%;
+    }
+
+    #interests {
+        grid-column: auto;
+
+        grid-template-columns: 25% 75%;
+    }
+
+
+    /* OVERLAY TABLET */
+
+    .project-modal {
+        width: 90vw;
+
+        max-height: 90vh;
+
+        grid-template-columns: 40% 60%;
+
+        gap: 25px;
+
+        padding: 35px;
+
+        overflow-y: auto;
+    }
+
+    .modal-image {
+        min-height: 450px;
+    }
+
+    #modal3D {
+        min-height: 450px;
+    }
+
+    .modal-content {
+        padding: 35px 10px 20px 0;
+    }
+
+    .modal-header h2 {
+        font-size: clamp(40px, 6vw, 65px);
+    }
+
+    .modal-body {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        padding: 10px 5vw;
+    }
+
+    nav {
+        display: none;
+    }
+
+
+    /* =========================
+       HERO
+       ========================= */
+
+    .hero {
+        min-height: 75vh;
+
+        padding: 20px 5vw 30px;
+
+        width: 100%;
+    }
+
+    #ojo {
+        width: 80px;
+
+        height: auto;
+    }
+
+    .hero-title {
+        width: 100%;
+
+        overflow: hidden;
+    }
+
+    .hero-title h1 {
+
+        /*
+         * Más pequeño para que IRIS FERRAGUD
+         * entre siempre dentro de la pantalla.
+         */
+
+        font-size: clamp(
+            55px,
+            16vw,
+            110px
+        );
+
+        letter-spacing: -4px;
+
+        line-height: 0.8;
+
+        width: 100%;
+
+        max-width: 100%;
+
+        overflow-wrap: normal;
+    }
+
+    .hero-title p {
+        margin-top: 30px;
+
+        font-size: 13px;
+
+        text-align: center;
+    }
+
+
+    /* =========================
+       SECCIONES
+       ========================= */
+
+    section {
+        padding: 60px 5vw;
+    }
+
+
+    /* =========================
+       PROYECTOS
+       ========================= */
+
+    #proyectos {
+        width: 100%;
+
+        overflow: hidden;
+    }
+
+    #proyectos .section-header {
+
+        display: grid;
+
+        grid-template-columns: auto 1fr;
+
+        gap: 15px;
+
+        width: 100%;
+    }
+
+    #ojo_colgado {
+        display: none;
+    }
+
+
+    /*
+     * Cada proyecto ocupa la mitad
+     * del ancho disponible.
+     */
+
+    #proyectos .proyectos {
+
+        width: 100%;
+
+        padding: 5px;
+
+        display: flex;
+
+        justify-content: center;
+    }
+
+
+    /*
+     * Dos proyectos por fila.
+     */
+
+    #proyectos .proyectos:nth-of-type(1) {
+        grid-column: 1;
+    }
+
+    #proyectos .proyectos:nth-of-type(2) {
+        grid-column: 2;
+    }
+
+    #proyectos .proyectos:nth-of-type(3) {
+        grid-column: 1;
+    }
+
+    #proyectos .proyectos:nth-of-type(4) {
+        grid-column: 2;
+    }
+
+
+    /*
+     * CUADRADOS MÁS PEQUEÑOS
+     */
+
+    #proyectos .proyecto1,
+    #proyectos .proyecto2 {
+
+        width: 100%;
+
+        max-width: 170px;
+
+        aspect-ratio: 1 / 1;
+
+        height: auto;
+
+        min-height: 0;
+
+        left: 0;
+
+        margin: 0;
+
+        padding: 15px;
+
+        font-size: 13px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: space-between;
+    }
+
+    #proyectos .proyecto2 h3 {
+
+        font-size: 13px;
+
+        line-height: 1.15;
+    }
+
+    #proyectos .proyecto2 p {
+
+        font-size: 10px;
+
+        line-height: 1.2;
+    }
+
+    #proyectos .sabermas {
+
+        bottom: 12px;
+
+        font-size: 11px;
+    }
+
+    /* Evita que las herramientas se solapen con el botón */
+
+#proyectos .proyecto1,
+#proyectos .proyecto2 {
+    padding-bottom: 55px;
+}
+
+#proyectos .proyecto1 p,
+#proyectos .proyecto2 p {
+    margin-top: 12px;
+    padding-bottom: 15px;
+    line-height: 1.3;
+}
+
+#proyectos .sabermas {
+    bottom: 10px;
+}
+
+    /* =========================
+       ABOUT
+       ========================= */
+
+    #sobre-mi {
+        padding: 0;
+
+        margin-top: 100px;
+    }
+
+    #header_about {
+
+        position: static;
+
+        display: flex;
+
+        margin: 0 0 30px 5vw;
+    }
+
+    .about-content {
+
+        width: 90vw;
+
+        margin: 0 auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        border-radius: 20px;
+    }
+
+    .about-text {
+
+        padding: 35px 25px;
+
+        font-size: 14px;
+
+        text-align: left;
+    }
+
+    .about-text p + p {
+        margin-top: 20px;
+    }
+
+    .about-content img {
+
+        width: 70%;
+
+        height: auto;
+
+        margin: 0 auto 30px;
+    }
+
+    #Logo_sentado {
+        display: none;
+    }
+
+
+    /* =========================
+       EXPLORE
+       ========================= */
+
+    #header_skills {
+        margin-left: 0;
+    }
+
+    #tres_ojos {
+        display: none;
+    }
+
+    .content {
+
+        width: 100%;
+
+        margin: 30px auto 0;
+
+        grid-template-columns: 1fr;
+    }
+
+    .explore-content {
+
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+        padding: 25px;
+
+        gap: 30px;
+    }
+
+    .tool-groups {
+        grid-template-columns: 1fr;
+    }
+
+    .language-education {
+        margin-left: 0;
+    }
+
+    #interests {
+
+        grid-column: auto;
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    #interests ul {
+
+        justify-content: flex-start;
+
+        gap: 15px 25px;
+    }
+
+
+    /* =========================
+       CONTACTO
+       ========================= */
+
+    #contacto {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        overflow: hidden;
+
+        min-height: 700px;
+    }
+
+    #contacto_texto {
+
+        width: 100%;
+
+        bottom: 300px;
+
+        padding: 0 20px;
+
+        font-size: 18px;
+    }
+
+    #in,
+    #gh,
+    #cv {
+        width: 25px;
+    }
+
+    #logo_contacto {
+        width: 40px;
+    }
+
+
+    /*
+     * LA IMAGEN DE ABAJO NUNCA
+     * SE SALE DE LA PANTALLA.
+     */
+
+    #pie {
+
+        width: 100vw;
+
+        max-width: 100vw;
+
+        height: auto;
+
+        min-width: 0;
+
+        margin-top: 0;
+
+        left: 0;
+
+        object-fit: cover;
+
+        display: block;
+    }
+
+
+    /* =========================
+       OVERLAY MÓVIL
+       ========================= */
+
+    .project-overlay {
+
+        padding: 10px;
+
+        align-items: center;
+    }
+
+    .project-modal {
+
+        width: 95vw;
+
+        max-width: 95vw;
+
+        max-height: 94vh;
+
+        min-height: 0;
+
+        padding: 20px;
+
+        border-radius: 20px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        overflow-y: auto;
+    }
+
+    .close-modal {
+
+        width: 40px;
+
+        height: 40px;
+
+        top: 12px;
+
+        right: 12px;
+    }
+
+    #cerrar {
+        width: 25px;
+    }
+
+    .modal-image {
+
+        width: 100%;
+
+        height: 220px;
+
+        min-height: 220px;
+
+        flex-shrink: 0;
+
+        border-radius: 15px;
+    }
+
+    #modal3D {
+        min-height: 220px;
+    }
+
+    .modal-content {
+
+        width: 100%;
+
+        padding: 10px 0;
+    }
+
+    .modal-header {
+
+        margin-bottom: 25px;
+
+        padding-bottom: 20px;
+
+        padding-right: 35px;
+    }
+
+    .modal-header span {
+
+        margin-bottom: 15px;
+
+        font-size: 9px;
+    }
+
+    .modal-header h2 {
+
+        font-size: clamp(
+            32px,
+            9vw,
+            50px
+        );
+
+        letter-spacing: -2px;
+    }
+
+    .modal-body {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+    .modal-description p {
+
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+    .modal-info {
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 20px;
+    }
+
+    .modal-info p {
+        font-size: 12px;
+    }
+
+    .modal-github {
+        margin-top: 25px;
+    }
+
+    .modal-github a {
+
+        padding: 12px 18px;
+
+        font-size: 10px;
+    }
+}
+
+
+/* =========================================================
+   MÓVILES MUY PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+    .hero-title h1 {
+
+        font-size: 14vw;
+
+        letter-spacing: -2px;
+    }
+
+    #proyectos .proyectos {
+
+        padding: 3px;
+    }
+
+    #proyectos .proyecto1,
+    #proyectos .proyecto2 {
+
+        max-width: 145px;
+
+        padding: 12px;
+    }
+
+    #proyectos .proyecto2 h3 {
+
+        font-size: 12px;
+    }
+
+    #proyectos .proyecto2 p {
+
+        font-size: 9px;
+    }
+
+    #proyectos .sabermas {
+
+        bottom: 10px;
+
+        font-size: 10px;
+    }
+
+    .project-modal {
+
+        width: 96vw;
+
+        max-width: 96vw;
+
+        padding: 15px;
+    }
+
+    .modal-image {
+
+        height: 180px;
+
+        min-height: 180px;
+    }
+
+    #modal3D {
+
+        min-height: 180px;
+    }
+
+    .modal-header h2 {
+
+        font-size: 30px;
+
+        letter-spacing: -1px;
+    }
+
+    .modal-info {
+
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   PANTALLAS MUY ESTRECHAS
+   ========================================================= */
+
+@media (max-width: 350px) {
+
+    .hero-title h1 {
+
+        font-size: 13vw;
+
+        letter-spacing: -2px;
+    }
+
+    #proyectos .proyecto1,
+    #proyectos .proyecto2 {
+
+        max-width: 130px;
+
+        padding: 10px;
+    }
+
+    #proyectos .proyecto2 h3 {
+
+        font-size: 11px;
+    }
+
+    #proyectos .proyecto2 p {
+
+        font-size: 8px;
+    }
+
+    #proyectos .sabermas {
+
+        font-size: 9px;
+
+        bottom: 8px;
+    }
+}
