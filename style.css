@@ -1168,10 +1168,36 @@ section {
     }
 
 
-    /*
-     * Cada proyecto ocupa la mitad
-     * del ancho disponible.
-     */
+    #proyectos .proyectos {
+        width: 100%;
+        padding: 5px;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        overflow-x: visible;
+        overflow-y: visible;
+
+        gap: 15px;
+    }
+
+    #proyectos .proyecto1,
+    #proyectos .proyecto2 {
+        flex: none;
+
+        width: 100%;
+        max-width: 170px;
+
+        aspect-ratio: 1 / 1;
+        height: auto;
+
+        left: 0;
+        margin: 0;
+        padding: 15px;
+
+        font-size: 13px;
+    }
 
     #proyectos .proyectos {
 

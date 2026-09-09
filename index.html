@@ -750,6 +750,7 @@ document.addEventListener(
 const carrusel = document.querySelector(".proyectos");
 
 carrusel.addEventListener("wheel", (e) => {
+    if (window.innerWidth <= 768) return;
 
     const maxScroll = carrusel.scrollWidth - carrusel.clientWidth;
 
@@ -760,7 +761,7 @@ carrusel.addEventListener("wheel", (e) => {
     ) {
         e.preventDefault();
 
-        carrusel.scrollLeft += e.deltaY *10;
+        carrusel.scrollLeft += e.deltaY *15;
     }
 
 }, { passive: false });
