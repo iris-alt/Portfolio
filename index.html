@@ -34,76 +34,73 @@
     </section>
 
     <section id="proyectos" class="projects">
-        <div class="section-header">
-            <span>01</span>
-            <h2>PROJECTS</h2>
-            <img id="ojo_colgado" src="logo_c.gif" alt="IFJ."/>
-            <div class="proyectos">
-    <div class="proyecto2" id="web">
-        <br><br>
-        <h3>Story-telling: Interactive Web</h3>
-        <br>
-        <p>HTML, CSS, JavaScript, GIMP</p>
 
-        <button 
-            class="sabermas"
-            data-project="web">
-            See more →
-        </button>
+    <div class="section-header">
+        <span>01</span>
+        <h2>PROJECTS</h2>
+        <img id="ojo_colgado" src="logo_c.gif" alt="IFJ."/>
     </div>
-</div>
 
+    <div class="proyectos">
 
-<div class="proyectos">
-    <div class="proyecto2" id="drm">
-        <br><br>
-        <h3>DRM Prototype: Cybersecurity</h3>
-        <br>
-        <p>Python, AES-128 encryption, firma RSA</p>
+        <div class="proyecto2" id="web">
+            <br><br>
+            <h3>Story-telling: Interactive Web</h3>
+            <br>
+            <p>HTML, CSS, JavaScript, GIMP</p>
 
-        <button 
-            class="sabermas"
-            data-project="drm">
-            See more →
-        </button>
-    </div>
-</div>
-
-
-<div class="proyectos">
-    <div class="proyecto2" id="voz">
-        <br>
-        <h3>Speech synthesizer: Signal processing</h3>
-        <br>
-        <p>Python, Jupyter Notebook</p>
-
-        <button 
-            class="sabermas"
-            data-project="voz">
-            See more →
-        </button>
-    </div>
-</div>
-
-
-<div class="proyectos">
-    <div class="proyecto2" id="zombie">
-        <br><br>
-        <h3>Zombie: 3D Modeling</h3>
-        <br>
-        <p>Blender, GIMP</p>
-
-        <button 
-            class="sabermas"
-            data-project="zombie">
-            See more →
-        </button>
-    </div>
-</div>
+            <button class="sabermas" data-project="web">
+                See more →
+            </button>
         </div>
 
-       
-    </section>
+        <div class="proyecto2" id="drm">
+            <br><br>
+            <h3>DRM Prototype: Cybersecurity</h3>
+            <br>
+            <p>Python, AES-128 encryption, firma RSA</p>
+
+            <button class="sabermas" data-project="drm">
+                See more →
+            </button>
+        </div>
+
+        <div class="proyecto2" id="voz">
+            <br>
+            <h3>Speech synthesizer: Signal processing</h3>
+            <br>
+            <p>Python, Jupyter Notebook</p>
+
+            <button class="sabermas" data-project="voz">
+                See more →
+            </button>
+        </div>
+
+        <div class="proyecto2" id="zombie">
+            <br><br>
+            <h3>Zombie: 3D Modeling</h3>
+            <br>
+            <p>Blender, GIMP</p>
+
+            <button class="sabermas" data-project="zombie">
+                See more →
+            </button>
+        </div>
+
+        <div class="proyecto2" id="hospital">
+            <br>
+            <h3>Terror at the hospital: A Unity videogame</h3>
+            <br>
+            <p>Unity</p>
+
+            <button class="sabermas" data-project="hospital">
+                See more →
+            </button>
+        </div>
+
+    </div>
+
+</section>
 
     <section id="sobre-mi" class="about">
         <div class="section-header" id="header_about">
@@ -292,6 +289,10 @@
         src="proyecto-web.jpg"
         alt="Imagen del proyecto"
     >
+
+    <video id="modalVideo" controls autoplay muted>
+    <source src="" type="video/mp4">
+    </video>
 
     <!-- Visor 3D del zombie -->
     <model-viewer
@@ -493,6 +494,28 @@ zombie: {
     pdf:
         "Portfolio.pdf"
 
+},
+
+hospital: {
+   
+    video:
+    "hospital.mp4",
+
+    category: "3D / RV",
+
+    title:
+        "Terror at the hospital:<br> A Unity videogame",
+
+    description:
+        "Terror at the Hospital is a horror video game made with Unity, using various models and assets. Your goal is to survive the hospital while killing the bats you find on your way. Don't be afraid: it is the patient who should be scared.",
+
+    tools:
+        "Unity",
+
+    type:
+        "RV",
+    
+
 }
 
 };
@@ -569,28 +592,41 @@ buttons.forEach(button => {
    CAMBIAR VISUAL DEL PROYECTO
    ========================= */
 
+   const modalVideo = document.getElementById("modalVideo");
+
 if (projectID === "zombie") {
 
     /* Mostrar visor 3D */
     modalImageContainer.classList.add("show-3d");
 
-} else {
+    modalImage.style.display = "none";
+    modalVideo.style.display = "none";
 
-    /* Mostrar imagen */
-    modalImageContainer.classList.remove("show-3d");
+} else if (project.video){
+
+  modalImageContainer.classList.remove("show-3d");
+
+    modalImage.style.display = "none";
+    modalVideo.style.display = "block";
+
+    modalVideo.src = project.video;
+    modalVideo.load();
+
+} else{
+     modalImageContainer.classList.remove("show-3d");
+
+    modalVideo.style.display = "none";
+    modalImage.style.display = "block";
 
     modalImage.style.opacity = "0";
 
     setTimeout(() => {
 
         modalImage.src = project.image;
-
         modalImage.alt = project.category;
-
         modalImage.style.opacity = "1";
 
     }, 150);
-
 }
 
 
@@ -632,7 +668,9 @@ if (project.github) {
     modalGithubLink.setAttribute("download", "");
     modalGithubLink.removeAttribute("target");
 
-} else {
+}
+
+else {
 
     modalGithub.style.display = "none";
 
@@ -708,6 +746,25 @@ document.addEventListener(
 
     }
 );
+
+const carrusel = document.querySelector(".proyectos");
+
+carrusel.addEventListener("wheel", (e) => {
+
+    const maxScroll = carrusel.scrollWidth - carrusel.clientWidth;
+
+    // Si todavía podemos movernos horizontalmente
+    if (
+        (e.deltaY > 0 && carrusel.scrollLeft < maxScroll) ||
+        (e.deltaY < 0 && carrusel.scrollLeft > 0)
+    ) {
+        e.preventDefault();
+
+        carrusel.scrollLeft += e.deltaY *10;
+    }
+
+}, { passive: false });
+
 
 </script>
 

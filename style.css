@@ -40,7 +40,7 @@ header {
     font-family: 'Raleway', sans-serif;
 
     position: relative;
-    left: 60%;
+   
 
     padding: 25px;
 
@@ -98,8 +98,43 @@ header {
 }
 
 .proyectos div {
+
+    margin-top: 70px;
+    left:20%;
+    width: 60vh;
+    
     display: block;
     transition: 0.35s ease-in-out;
+}
+
+.proyectos {
+    
+
+    
+    display: flex;
+    gap: 30px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+
+    width: 100%;
+    
+    padding: 20px 0 30px;
+}
+
+.proyectos::-webkit-scrollbar {
+    display: none;
+}
+
+.proyectos {
+    scrollbar-width: none;
+}
+
+.proyectos > .proyecto1,
+.proyectos > .proyecto2 {
+    flex: 0 0 250px;
 }
 
 .proyecto2:hover {
@@ -686,7 +721,7 @@ section {
    IMAGEN MODAL
    ========================= */
 
-.modal-image {
+.modal-image, .model-video {
     width: 100%;
 
     height: 100%;
@@ -702,7 +737,7 @@ section {
     position: relative;
 }
 
-.modal-image img {
+.modal-image img, video {
     width: 100%;
 
     height: 100%;
@@ -714,7 +749,7 @@ section {
     transition: opacity 0.25s ease;
 }
 
-.modal-image::after {
+.modal-image::after, .modal.video::after {
     content: "";
 
     position: absolute;
